@@ -7,11 +7,11 @@ license = "GPLv3"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-PyQt5 = "^5.15.6"
-pyqt5-tools = "^5.15.4"
+PyQt5 = "^5.15"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2"
+qt5-applications = "^5.15"
+PyQt5-stubs = "^5.15"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
