@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "pyqt5-styled"
+name = "qtstyled"
 version = "0.1.0"
-description = "PyQt5 examples of customization by Qt Widgets to support branding or modern designs."
+description = "PyQt customized widgets (only Qt Widgets) to support branding or modern designs."
 authors = ["Rython Fu <alex4814@126.com>"]
 license = "GPLv3"
 
