@@ -12,12 +12,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.init_ui()
-        self.init_conn()
+        # self.init_conn()
 
     def init_ui(self):
         self.ui.contactsView.setViewMode(QtWidgets.QListView.IconMode)
         self.ui.contactsView.setResizeMode(QtWidgets.QListView.Adjust)
         self.ui.contactsView.setSpacing(20)
+        self.ui.contactsView.setGridSize(QtCore.QSize(275, 348))
         self.ui.contactsView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.ui.contactsView.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked)
         self.ui.contactsView.setMouseTracking(True)
@@ -25,7 +26,7 @@ class MainWindow(QtWidgets.QMainWindow):
         model = ContactModel()
         model.populate(contacts)
         self.ui.contactsView.setModel(model)
-        delegate = ContactDelegate()
+        delegate = ContactDelegate(self.ui.contactsView)
         self.ui.contactsView.setItemDelegate(delegate)
 
     def init_conn(self):

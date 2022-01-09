@@ -12,7 +12,7 @@ class ContactPlaceholder(QtWidgets.QWidget):
         self.setMouseTracking(True)
         self.setAutoFillBackground(True)
 
-    def leaveEvent(self, a0: QtCore.QEvent) -> None:
-        self.editingFinished.emit()
-        super().leaveEvent(a0)
-        print(f"editor {self} leave event processed")
+    # def leaveEvent(self, a0: QtCore.QEvent) -> None:
+    #     self.editingFinished.emit()
+    #     super().leaveEvent(a0)
+    #     print(f"editor {self} leave event processed")

@@ -43,6 +43,10 @@ class ContactDelegate(QtWidgets.QStyledItemDelegate):
 
     def paint(self, painter: QtGui.QPainter, option: QtWidgets.QStyleOptionViewItem, index: QtCore.QModelIndex):
         contact: Contact = index.data(QtCore.Qt.UserRole)
+        if isinstance(self.parent(), QtWidgets.QAbstractItemView):
+            self.parent().openPersistentEditor(index)
+        super().paint(painter, option, index)
+        return
 
         if contact.placeholder:
             rect = option.rect.adjusted(0, 0, 0, -self.HeightPlaceholderGender)
